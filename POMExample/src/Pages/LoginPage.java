@@ -1,9 +1,9 @@
-package Guru99Pages;
+package Pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class Guru99Login {
+public class LoginPage {
 	
 	WebDriver driver;
 	
@@ -13,7 +13,7 @@ public class Guru99Login {
 	By Title=By.className("barone");
 	By BtnLogin=By.name("btnLogin");
 	
-	public Guru99Login(WebDriver driver)
+	public LoginPage(WebDriver driver)
 	{
 		this.driver=driver;
 	}
@@ -50,7 +50,7 @@ public class Guru99Login {
 
      * @return  */
 
-	public void LoginToGuru99(String UsrName,String Password)
+	public void LoginToApp(String UsrName,String Password)
 	{
 		//Fill User Name
 		this.setUserName(UsrName);

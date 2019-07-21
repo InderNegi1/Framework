@@ -6,15 +6,15 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import Guru99Pages.Guru99Home;
-import Guru99Pages.Guru99Login;
+import Pages.HomePage;
+import Pages.LoginPage;
 
-public class Test99GuruLogin {
+public class TestLogin {
 	
 	WebDriver driver;
-	Guru99Home objHome;
-	Guru99Login objLogin;
-	String URL="http://demo.guru99.com/V4/";
+	HomePage objHome;
+	LoginPage objLogin;
+	String URL="";
 	
     @BeforeTest
 	public void setUp()
@@ -24,8 +24,8 @@ public class Test99GuruLogin {
         driver.get(URL);
 	}
     
-    /**This test case will login in http://demo.guru99.com/V4/
-     * Verify login page title as guru99 bank
+    /**This test case will login in http://demo.com/V4/
+     * Verify login page title as 99 bank
      * Login to application
      * Verify the home page using Dashboard message  */
     
@@ -33,17 +33,17 @@ public class Test99GuruLogin {
     public void Test_Login_Page_Appear_Correctly()
     {
     	//Create Login Page Object
-    	objLogin = new Guru99Login(driver);
+    	objLogin = new LoginPage(driver);
     	
     	//Varify Login Page Title
     	String LoginPageTitle=objLogin.getLoginPageTitle();
-    	Assert.assertTrue(LoginPageTitle.toLowerCase().contains("Guru99 Bank"));
+    	Assert.assertTrue(LoginPageTitle.toLowerCase().contains("Bank"));
     	
         //login to application
-        objLogin.LoginToGuru99("mgr123", "mgr!23");
+        objLogin.LoginToApp("mgr123", "mgr!23");
         
         // go the next page
-        objHome =new Guru99Home(driver);
+        objHome =new HomePage(driver);
 
         //Verify home page
         Assert.assertTrue(objHome.getHomePageUserName().toLowerCase().contains("manger id : mgr123"));
