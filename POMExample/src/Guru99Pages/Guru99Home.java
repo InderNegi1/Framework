@@ -8,9 +8,11 @@ public class Guru99Home {
 	WebDriver driver;
 	By HomePageUserName= By.xpath("//table//tr[@class='heading3']");
 	
+	//This is new commit from inder
 	public Guru99Home(WebDriver driver)
 	{
 		this.driver=driver;
+		
 	}
 	
 	//Get the username from home page
