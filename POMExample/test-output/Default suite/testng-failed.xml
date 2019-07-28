@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestCases.Test99GuruLogin">
+      <class name="TestCases.TestLogin">
         <methods>
           <include name="Test_Login_Page_Appear_Correctly"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- TestCases.Test99GuruLogin -->
+      </class> <!-- TestCases.TestLogin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
